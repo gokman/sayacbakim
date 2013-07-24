@@ -64,8 +64,8 @@ public class ServiceAydem extends Activity
 		METHOD_NAME = "UpdatePanoMalzeme";
 		Map<String, Object> Parameters = new HashMap<String, Object>();
 		
-		Parameters.put("panelId", panelId);
-		Parameters.put("malzemeId", malzemeId);
+		Parameters.put("panelid", panelId);
+		Parameters.put("malzemeid", malzemeId);
 		Parameters.put("value", value);
 		Parameters.put("description", Description);
 		Parameters.put("isselected", isselected);
@@ -123,7 +123,7 @@ public class ServiceAydem extends Activity
 		SOAP_ACTION = "http://tempuri.org/LoadPanoMalzeme";
 		METHOD_NAME = "LoadPanoMalzeme";
 		Map<String, Object> Parameters = new HashMap<String, Object>();
-		Parameters.put("panelId", PanelId);
+		Parameters.put("panelid", PanelId);
 		SoapObject ListMalzeme=null;
 		
 		List<Malzeme> malzemeList = new ArrayList<Malzeme>();
@@ -155,8 +155,8 @@ public class ServiceAydem extends Activity
 		SOAP_ACTION = "http://tempuri.org/LoadPanel";
 		METHOD_NAME = "LoadPanel";
 		Map<String, Object> Parameters = new HashMap<String, Object>();
-		Parameters.put("userId", userId);
-		Parameters.put("panelId", userId);
+		Parameters.put("userid", userId);
+		Parameters.put("panelid", userId);
 		SoapObject ListWorker=null;
 		List<Pano> panoList= new ArrayList<Pano>();
 		try 
@@ -187,7 +187,7 @@ public class ServiceAydem extends Activity
 		SOAP_ACTION = "http://tempuri.org/GetPanelVariable";
 		METHOD_NAME = "GetPanelVariable";
 		Map<String, Object> Parameters = new HashMap<String, Object>();
-		Parameters.put("panelId", contents);
+		Parameters.put("panelid", contents);
 		String soapObject="";
 		try 
 		{
@@ -210,7 +210,7 @@ public class ServiceAydem extends Activity
 			SOAP_ACTION = "http://tempuri.org/IsTrafoAvailable";
 			METHOD_NAME = "IsTrafoAvailable";
 			Map<String, Object> Parameters = new HashMap<String, Object>();
-			Parameters.put("trafoCode", trafoCode);
+			Parameters.put("trafocode", trafoCode);
 			try 
 			{
 				return Boolean.parseBoolean(HttpTransport(SOAP_ACTION,METHOD_NAME, NAMESPACE, URL, Parameters).toString());
@@ -228,7 +228,7 @@ public class ServiceAydem extends Activity
 		SOAP_ACTION = "http://tempuri.org/IsTesisatNoAvailable";
 		METHOD_NAME = "IsTesisatNoAvailable";
 		Map<String, Object> Parameters = new HashMap<String, Object>();
-		Parameters.put("tesisatNo", tesisatNo);
+		Parameters.put("tesisatno", tesisatNo);
 		try 
 		{
 			return Boolean.parseBoolean(HttpTransport(SOAP_ACTION,METHOD_NAME, NAMESPACE, URL, Parameters).toString());
@@ -246,15 +246,15 @@ public class ServiceAydem extends Activity
 			METHOD_NAME = "UpsertPanel";
 			
 			Parameters.put("photoList", pano.PhotoList);
-			Parameters.put("modemImeiNo", pano.ModemImeiNo);
-			Parameters.put("panelId", pano.PanelId);
-			Parameters.put("serialNo1", pano.Sayac1);
-			Parameters.put("serialNo2", pano.Sayac2);
+			Parameters.put("modemimeino", pano.ModemImeiNo);
+			Parameters.put("panelid", pano.PanelId);
+			Parameters.put("serialno1", pano.Sayac1);
+			Parameters.put("serialno2", pano.Sayac2);
 			Parameters.put("statu", pano.Statu);	
-			Parameters.put("userId", pano.UserId);
-			Parameters.put("tesisatNo", pano.TesisatNo);
+			Parameters.put("userid", pano.UserId);
+			Parameters.put("tesisatno", pano.TesisatNo);
 			Parameters.put("tesisatCarpan", pano.TesisatCarpan);
-			Parameters.put("trafoCode", pano.TrafoCode);
+			Parameters.put("trafocode", pano.TrafoCode);
 			Parameters.put("trafoCarpan", pano.TrafoCarpan);
 			Parameters.put("mapX", GlobalVariables.getIntance().MapX);
 			Parameters.put("mapY", GlobalVariables.getIntance().MapY);
@@ -315,78 +315,78 @@ public class ServiceAydem extends Activity
 			SOAP_ACTION = "http://tempuri.org/UpdateWorkOrderStatu_PLANLANDI";
 			METHOD_NAME = "UpdateWorkOrderStatu_PLANLANDI";
 			
-			Parameters.put("workOrderStatu", workorder.StatuId);
+			Parameters.put("workorderstatu", workorder.StatuId);
 			Parameters.put("description", workorder.Description);
 			Parameters.put("updateUser", workorder.UserId);
-			Parameters.put("workOrderId", workorder.ID);
+			Parameters.put("workorderid", workorder.ID);
 			break;
 		case 2://MONTAJ_TAMAMLANDI
 			
 			SOAP_ACTION = "http://tempuri.org/UpdateWorkOrderStatu_MONTAJTAMAMLANDI";
 			METHOD_NAME = "UpdateWorkOrderStatu_MONTAJTAMAMLANDI";
-			Parameters.put("workOrderStatu", workorder.StatuId);
+			Parameters.put("workorderstatu", workorder.StatuId);
 			Parameters.put("description", workorder.Description);
 			Parameters.put("updateUser", workorder.UserId);
-			Parameters.put("workOrderId", workorder.ID);
+			Parameters.put("workorderid", workorder.ID);
 			Parameters.put("modemNumber", workorder.ModemImeiNo);
 			Parameters.put("serialNumber",workorder.SerialNo);
 			Parameters.put("oldSerialNumber", workorder.OldSerialNo);
-			Parameters.put("secondImagePath", workorder.secondimagepath);
-			Parameters.put("firstImagePath", workorder.firstimagepath);
+			Parameters.put("secondimagepath", workorder.secondimagepath);
+			Parameters.put("firstimagepath", workorder.firstimagepath);
 			//Parameters.put("secondImage", ServiceLocater.GlobalVariables.getIntance().secondImageByte);
 			break;
 		case 3://CALISILIYOR
 			SOAP_ACTION = "http://tempuri.org/UpdateWorkOrderStatu_CALISILIYOR";
 			METHOD_NAME = "UpdateWorkOrderStatu_CALISILIYOR";
 			
-			Parameters.put("workOrderStatu", workorder.StatuId);
+			Parameters.put("workorderstatu", workorder.StatuId);
 			Parameters.put("description", workorder.Description);
 			Parameters.put("updateUser", workorder.UserId);
-			Parameters.put("workOrderId", workorder.ID);
+			Parameters.put("workorderid", workorder.ID);
 			Parameters.put("modemNumber", workorder.ModemImeiNo);
 			Parameters.put("serialNumber",workorder.SerialNo);
 			Parameters.put("oldSerialNumber", workorder.OldSerialNo);
 			Parameters.put("mapX", workorder.LAT);
 			Parameters.put("mapY",workorder.LONG);
-			Parameters.put("firstImagePath", workorder.firstimagepath);
+			Parameters.put("firstimagepath", workorder.firstimagepath);
 			//Parameters.put("firstImage",ServiceLocater.GlobalVariables.getIntance().firstImageByte);
 			break;
 		case 4://BEKLEMEDE
 			SOAP_ACTION = "http://tempuri.org/UpdateWorkOrderStatu_BEKLEMEDE";
 			METHOD_NAME = "UpdateWorkOrderStatu_BEKLEMEDE";
 			
-			Parameters.put("workOrderStatu", workorder.StatuId);
+			Parameters.put("workorderstatu", workorder.StatuId);
 			Parameters.put("description", workorder.Description);
 			Parameters.put("updateUser", workorder.UserId);
 			Parameters.put("modemNumber", workorder.ModemImeiNo);
 			Parameters.put("serialNumber",workorder.SerialNo);
 			Parameters.put("mapX", workorder.LAT);
 			Parameters.put("mapY",workorder.LONG);
-			Parameters.put("workOrderId", workorder.ID);
-			Parameters.put("firstImagePath", workorder.firstimagepath);			
+			Parameters.put("workorderid", workorder.ID);
+			Parameters.put("firstimagepath", workorder.firstimagepath);			
 			break;
 		case 5://IPTAL
 			SOAP_ACTION = "http://tempuri.org/UpdateWorkOrderStatu_IPTAL";
 			METHOD_NAME = "UpdateWorkOrderStatu_IPTAL";
 			
-			Parameters.put("workOrderStatu", workorder.StatuId);
+			Parameters.put("workorderstatu", workorder.StatuId);
 			Parameters.put("description", workorder.Description);
 			Parameters.put("updateUser", workorder.UserId);
 			Parameters.put("modemNumber", workorder.ModemImeiNo);
 			Parameters.put("serialNumber",workorder.SerialNo);
 			Parameters.put("mapX", workorder.LAT);
 			Parameters.put("mapY",workorder.LONG);
-			Parameters.put("workOrderId", workorder.ID);
-			Parameters.put("firstImagePath", workorder.firstimagepath);
+			Parameters.put("workorderid", workorder.ID);
+			Parameters.put("firstimagepath", workorder.firstimagepath);
 			break;
 		case 6://ÝS_EMRÝ_TAMAMLANDI
 			SOAP_ACTION = "http://tempuri.org/UpdateWorkOrderStatu_ISEMRITAMAMLANDI";
 			METHOD_NAME = "UpdateWorkOrderStatu_ISEMRITAMAMLANDI";
 			
-			Parameters.put("workOrderStatu", workorder.StatuId);
+			Parameters.put("workorderstatu", workorder.StatuId);
 			Parameters.put("description", workorder.Description);
 			Parameters.put("updateUser", workorder.UserId);
-			Parameters.put("workOrderId", workorder.ID);
+			Parameters.put("workorderid", workorder.ID);
 			Parameters.put("modemNumber", workorder.ModemImeiNo);
 			Parameters.put("serialNumber",workorder.SerialNo);
 			Parameters.put("oldSerialNumber", workorder.OldSerialNo);
@@ -411,7 +411,7 @@ public class ServiceAydem extends Activity
 		final String METHOD_NAME = "IsMeterReadOutOk";
 
 		Map<String, Object> Parameters = new HashMap<String, Object>();
-		Parameters.put("serialNo", serialNo);
+		Parameters.put("serialno", serialNo);
 		
 		String soapObject="";
 		boolean result=false;
@@ -441,7 +441,7 @@ public class ServiceAydem extends Activity
 		METHOD_NAME = "IsModemAvailable";
 		
 		Map<String, Object> Parameters = new HashMap<String, Object>();
-		Parameters.put("modemImeiNo", ModemImeiNo);
+		Parameters.put("modemimeino", ModemImeiNo);
 		String soapObject="";
 		boolean result=false;
 		try 
@@ -468,7 +468,7 @@ public class ServiceAydem extends Activity
 		METHOD_NAME = "IsModemUsable";
 		
 		Map<String, Object> Parameters = new HashMap<String, Object>();
-		Parameters.put("modemImeiNo", ModemImeiNo);
+		Parameters.put("modemimeino", ModemImeiNo);
 		String soapObject="";
 		boolean result=false;
 		try 
@@ -494,7 +494,7 @@ public class ServiceAydem extends Activity
 		METHOD_NAME = "IsSayacAvailable";
 		
 		Map<String, Object> Parameters = new HashMap<String, Object>();
-		Parameters.put("serialNo", SayacSeriNo);
+		Parameters.put("serialno", SayacSeriNo);
 		String soapObject="";
 		boolean result=false;
 		try 
@@ -523,7 +523,7 @@ public class ServiceAydem extends Activity
 		METHOD_NAME = "IsSayacUsable";
 		
 		Map<String, Object> Parameters = new HashMap<String, Object>();
-		Parameters.put("serialNo", SayacSeriNo);
+		Parameters.put("serialno", SayacSeriNo);
 		String soapObject="";
 		boolean result=false;
 		try 
