@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_gravity="right"
+         android:orientation="horizontal" >
+
+     <TextView
+         android:id="@+id/lblMapX"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="top"
+         android:layout_marginLeft="5dp"
+         android:layout_weight="0.31"
+         android:text="@string/lblMapX"
+         android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/lblMapY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_weight="0.32"
+            android:text="@string/lblMapY"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="232dp"
+            android:background="@drawable/background"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/value"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/description"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtdescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_gravity="center_horizontal"
+      android:background="@drawable/background"
+      android:orientation="horizontal" >
+			<Button
+                android:id="@+id/btnMalzemeeditOk"
+                android:layout_width="151dp"
+                android:layout_height="58dp"
+                android:background="@drawable/button"
+                android:text="@string/ok" />
+            <Button
+                android:id="@+id/btnMalzemeeditCancel"
+                android:layout_width="151dp"
+                android:layout_height="58dp"
+                android:background="@drawable/button"
+                android:text="@string/Cancel" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,1281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/header_logo" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/home" />
+
+
+    <Button
+        android:id="@+id/btnMalzemeOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textView1"
+        android:background="@drawable/tikbutton"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:layout_toLeftOf="@+id/imageView2"
+        android:text="Pano Malzeme"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="normal" />
+</RelativeLayout>
+
+ <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.22"
+        android:background="@drawable/background" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+<TextView
+    android:id="@+id/nm1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="1"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+
+            <CheckBox
+                android:id="@+id/cbm1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm1"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtm1"
+                android:layout_width="50dp"
+                android:layout_height="match_parent" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="2"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm2"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtm2"
+                android:layout_width="50dp"
+                android:layout_height="match_parent" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="3"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm3"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtm3"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="4"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm4"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtm4"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm5"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="5"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm5"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtm5"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm6"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="6"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm6"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtm6"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm7"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="7"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm7"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtm7"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm8"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="8"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm8"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtm8"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm9"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="9"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm9"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtm9"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm10"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="10"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm10"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtm10"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm11"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="11"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm11"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtm11"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm12"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="12"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm12"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtm12"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm13"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="13"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm13"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtm13"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm14"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="14"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm4"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtm14"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm15"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="15"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm15"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtm15"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm16"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="16"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm16"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtm16"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm17"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="17"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm17"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtm17"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm18"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="18"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm18"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtm18"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm19"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="19"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm19"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtm19"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm20"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="20"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm20"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtm20"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm21"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="21"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm21"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtm21"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm22"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="22"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm22"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtm22"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm23"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="23"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm23"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtm23"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm24"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="24"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm24"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtm24"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm25"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="25"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm25"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/txtm25"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm26"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="26"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm26"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/txtm26"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm27"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="27"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm27"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/txtm27"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm28"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="28"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:textColor="@color/black"
+                android:text="@string/lblm28"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/txtm28"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm29"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="29"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:textColor="@color/black"
+                android:text="@string/lblm29"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/txtm29"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm30"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="30"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="0.75"
+                android:text="@string/lblm30"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/txtm30"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm31"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="31"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/lblm31"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/txtm31"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm32"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="32"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="0.75"
+                android:text="@string/lblm32"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/txtm32"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm33"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="33"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="0.75"
+                android:text="@string/lblm33"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/txtm33"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm34"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="34"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:textColor="@color/black"
+                android:text="@string/lblm34"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/txtm34"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm35"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="35"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="0.75"
+                android:text="@string/lblm35"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/txtm35"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm36"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="36"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="0.75"
+                android:text="@string/lblm36"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/txtm36"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm37"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="37"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm37"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="0.75"
+                android:text="@string/lblm37"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/txtm37"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+<TextView
+    android:id="@+id/nm38"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="38"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/black" />
+            <CheckBox
+                android:id="@+id/cbm38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:textColor="@color/black"
+                android:text="@string/lblm38"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/txtm38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </EditText>
+        </LinearLayout>
+ </LinearLayout>
+</ScrollView>      
+</LinearLayout>
