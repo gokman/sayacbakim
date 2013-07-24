@@ -48,25 +48,25 @@ public class WorkOrder implements Serializable
 		try {
 		
 		this.ID = Integer.parseInt(GetValue(_person,"ID"));
-		this.CityName =GetValue(_person,"CityName");
-		this.TownName =GetValue(_person,"TownName");
-		this.MeterType =GetValue(_person,"MeterType");
+		this.CityName =GetValue(_person,"CITYNAME");
+		this.TownName =GetValue(_person,"TOWNNAME");
+		this.MeterType =GetValue(_person,"METERTYPE");
 		this.WORKNAME = GetValue(_person,"WORKNAME");
-		this.StatuId =EnumWorkOrderStatus.getWorkOrderStatuCodeForNo(GetValue(_person,"StatuId"));
-		this.SerialNo =GetValue(_person,"SerialNo");
-		this.ModemImeiNo = GetValue(_person,"ModemImeiNo");
-	    this.Statu=EnumWorkOrderStatus.getWorkOrderStatus(GetValue(_person,"StatuId"));
-        this.UserName= GetValue(_person,"UserName");
-        this.Address= GetValue(_person,"Address");
-        this.LAT=GetValue(_person,"LAT");
-        this.LONG=GetValue(_person,"LONG");
-        this.TesisatNo= GetValue(_person,"TesisatNo");
-        this.OldSerialNo=GetValue(_person,"OldSerialNo");
-        this.Multiplier =GetValue(_person,"Multiplier");
-        this.CutInterval=GetValue(_person,"CutInterval");
-        this.firstimagepath =GetValue(_person,"firstimagepath");
-        this.secondimagepath=GetValue(_person,"secondimagepath");
-        this.ModemGsmNo=GetValue(_person,"ModemGsmNo");
+		this.StatuId =EnumWorkOrderStatus.getWorkOrderStatuCodeForNo(GetValue(_person,"STATUID"));
+		this.SerialNo =GetValue(_person,"SERIALNO");
+		this.ModemImeiNo = GetValue(_person,"MODEMIMEINO");
+	    this.Statu=EnumWorkOrderStatus.getWorkOrderStatus(GetValue(_person,"STATUID"));
+        this.UserName= GetValue(_person,"USERNAME");
+        this.Address= GetValue(_person,"ADDRESS");
+        this.LAT=GetValue(_person,"LATITUDE");
+        this.LONG=GetValue(_person,"LONGITUDE");
+        this.TesisatNo= GetValue(_person,"TESISATNO");
+        this.OldSerialNo=GetValue(_person,"OLDSERIALNO");
+        this.Multiplier =GetValue(_person,"MULTIPLIER");
+        this.CutInterval=GetValue(_person,"CUTINTERVAL");
+        this.firstimagepath =GetValue(_person,"FIRSTIMAGEPATH");
+        this.secondimagepath=GetValue(_person,"SECONDIMAGEPATH");
+        this.ModemGsmNo=GetValue(_person,"MODEMGSMNO");
 		}
 		catch (Exception e) 
 		{
