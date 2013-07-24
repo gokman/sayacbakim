@@ -7,13 +7,13 @@ public class Malzeme {
 	}
 
 	public Malzeme(SoapObject obj) {
-		this.PanelId = GetValue(obj, "PanelId");
-		this.MalzemeId=Integer.parseInt( GetValue(obj, "MalzemeId"));
-		this.Value=Float.parseFloat(GetValue(obj, "value"));
-		this.Description=GetValue(obj, "description");
-		this.IsSelected=Boolean.parseBoolean(GetValue(obj, "isselected"));
-		this.Name=GetValue(obj,"Name");
-		this.Unit=GetValue(obj,"Unit");
+		this.PanelId = GetValue(obj, "PANELID");
+		this.MalzemeId=Integer.parseInt( GetValue(obj, "MALZEMEID"));
+		this.Value=Float.parseFloat(GetValue(obj, "VALUE"));
+		this.Description=GetValue(obj, "DESCRIPTION");
+		this.IsSelected=Boolean.parseBoolean(GetValue(obj, "ISSELECTED"));
+		this.Name=GetValue(obj,"NAME");
+		this.Unit=GetValue(obj,"UNIT");
 	}
 	public int Position;
 	public String PanelId;

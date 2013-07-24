@@ -7,16 +7,15 @@ public class Pano
 	public Pano(SoapObject object)
 	{
 		this.PanelId=GetValue(object,"ID");
-		this.Sayac1=GetValue(object,"SerialNo1");
-		this.Sayac2=GetValue(object,"SerialNo2");
-		this.ModemImeiNo=GetValue(object,"ModemImeiNo");
-		this.PhotoList=GetValue(object,"PhotoList");
-		this.Statu=Integer.parseInt( GetValue(object,"StatuId"));
-		this.PhotoList=GetValue(object,"PhotoList");
-		this.TrafoCode=GetValue(object,"TrafoCode");
-		this.TesisatNo=GetValue(object,"TesisatNo");
-		this.TrafoCarpan=GetValue(object,"TrafoCarpan");
-		this.TesisatCarpan=GetValue(object,"TesisatCarpan");
+		this.Sayac1=GetValue(object,"SERIALNO1");
+		this.Sayac2=GetValue(object,"SERIALNO2");
+		this.ModemImeiNo=GetValue(object,"MODEMIMEINO");
+		this.PhotoList=GetValue(object,"PHOTOLIST");
+		this.Statu=Integer.parseInt( GetValue(object,"STATUID"));
+		this.TrafoCode=GetValue(object,"TRAFOCODE");
+		this.TesisatNo=GetValue(object,"TESISATNO");
+		this.TrafoCarpan=GetValue(object,"TRAFOCARPAN");
+		this.TesisatCarpan=GetValue(object,"TESISATCARPAN");
 	}
 	public String GetValue(SoapObject object, String Field)
     {
