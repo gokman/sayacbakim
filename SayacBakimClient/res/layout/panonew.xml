@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+ 
+          <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/header_logo" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/home" />
+
+
+    <Button
+        android:id="@+id/btnHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textView1"
+        android:background="@drawable/ic_title_home_default"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:layout_toLeftOf="@+id/imageView2"
+        android:text="Pano Düzenle"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="normal" />
+</RelativeLayout>
+       <Spinner
+                    android:id="@+id/drpStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+                </Spinner>
+
+                 <LinearLayout
+                     android:id="@+id/linearLayout46"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="left"
+                     android:orientation="horizontal" >
+
+                     <ImageButton
+                         android:id="@+id/btnPicture"
+                         android:layout_width="wrap_content"
+                         android:layout_height="120dp"
+                         android:src="@drawable/camera_icon" />
+
+                     <TextView
+                         android:id="@+id/txtPhotoList"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:background="@drawable/customborder2"
+                         android:text=""
+                         android:textAppearance="?android:attr/textAppearanceMedium"
+                         android:textColor="@color/black"
+                         android:textSize="8dp" />
+
+                 </LinearLayout>
+
+     <LinearLayout
+         android:id="@+id/linearLayout990"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_gravity="left"
+         android:background="@drawable/customborder2"
+         android:orientation="horizontal" >
+                    <TextView
+                        android:id="@+id/textView77"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:text="@string/lblPanelNo"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/txtPanelId"
+                        android:layout_width="164dp"
+                        android:layout_height="50dp"
+                        android:inputType="text" />
+
+                    <ImageButton
+                        android:id="@+id/btnPanoBarcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:src="@drawable/barcodeimgbtn" />
+
+                </LinearLayout>
+    <LinearLayout
+         android:id="@+id/linearLayout990"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="@drawable/customborder2"
+         android:orientation="horizontal" >
+                    <TextView
+                        android:id="@+id/textView77"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lblModemNumber"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/txtModemImeiNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:inputType="number" />
+
+                </LinearLayout>
+                 <LinearLayout
+         android:id="@+id/linearLayout990"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="@drawable/customborder2"
+         android:orientation="horizontal" >
+
+
+
+                    <TextView
+                        android:id="@+id/textView77"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lblTrafoSayaci"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/txtTrafoSayaci"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:inputType="number" />
+
+                </LinearLayout>
+                 <LinearLayout
+         android:id="@+id/linearLayout990"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_gravity="left"
+         android:background="@drawable/customborder2"
+         android:orientation="horizontal" >
+
+
+
+                    <TextView
+                        android:id="@+id/textView77"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lblSokakSayaci"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+                    <EditText
+                        android:id="@+id/txtSokakSayaci"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:inputType="number" />
+
+                </LinearLayout>
+                
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+                    
+       <com.markupartist.android.widget.ActionBar 
+        android:id="@+id/TrafoBar"
+        style="@style/ActionBar"
+        />
+       
+       <LinearLayout
+         android:id="@+id/linearLayout990"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_gravity="left"
+         android:background="@drawable/customborder2"
+         android:orientation="horizontal" >
+
+
+
+                    <TextView
+                        android:id="@+id/textView77"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lblTrafoCode"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+                    <EditText
+                        android:id="@+id/txtTrafoCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+
+                </LinearLayout>
+                 <LinearLayout
+         android:id="@+id/linearLayout990"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_gravity="left"
+         android:background="@drawable/customborder2"
+         android:orientation="horizontal" >
+
+
+
+                    <TextView
+                        android:id="@+id/textView77"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lblCarpan"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+                    <EditText
+                        android:id="@+id/txtTrafoCarpan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal" />
+
+                </LinearLayout>
+    </LinearLayout>
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+       <com.markupartist.android.widget.ActionBar
+           android:id="@+id/SokakBar"
+           style="@style/ActionBar"/>
+         <LinearLayout
+         android:id="@+id/linearLayout990"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_gravity="left"
+         android:background="@drawable/customborder2"
+         android:orientation="horizontal" >
+                    <TextView
+                        android:id="@+id/textView77"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lblTesisaNo"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+                    <EditText
+                        android:id="@+id/txtTesisatNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+                 <LinearLayout
+         android:id="@+id/linearLayout990"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_gravity="left"
+         android:background="@drawable/customborder2"
+         android:orientation="horizontal" >
+                    <TextView
+                        android:id="@+id/textView77"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lblCarpan"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+                    <EditText
+                        android:id="@+id/txtSokakCarpan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout990"
+        android:layout_width="wrap_content"
+        android:layout_height="68dp"
+        android:background="@drawable/customborder2"
+        android:orientation="horizontal" >
+
+     <Button
+         android:id="@+id/btnPanoList"
+         android:layout_width="92dp"
+         android:layout_height="50dp"
+         android:background="@drawable/button"
+         android:text="Pano Listesi"
+         />
+
+     <Button
+         android:id="@+id/btnPanoSave"
+         android:layout_width="93dp"
+         android:layout_height="50dp"
+         android:background="@drawable/button"
+         android:text="@string/lblSave"
+         />
+
+     <Button
+         android:id="@+id/btnmalzeme"
+         android:layout_width="wrap_content"
+         android:layout_height="50dp"
+         android:background="@drawable/button"
+         android:text="Pano Malzeme" 
+          />
+
+     </LinearLayout>
+</LinearLayout>
+</ScrollView>

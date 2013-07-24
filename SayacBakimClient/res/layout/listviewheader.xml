@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="22dp"
+        android:layout_height="24dp"
+        android:src="@drawable/yesilnokta" />
+ <TextView
+        android:id="@+id/nbryesil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Text"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    <ImageView
+        android:id="@+id/imageView1"
+      android:layout_width="22dp"
+        android:layout_height="24dp"
+        android:src="@drawable/mavinokta" />
+
+    <TextView
+        android:id="@+id/nbrmavi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Text"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    <ImageView
+        android:id="@+id/imageView3"
+      android:layout_width="22dp"
+        android:layout_height="24dp"
+        android:layout_toRightOf="@+id/imageView1"
+        android:src="@drawable/sarinokta" />
+ <TextView
+        android:id="@+id/nbrsari"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Text"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="22dp"
+        android:layout_height="24dp"
+        android:src="@drawable/turuncunokta" />
+	   <TextView
+        android:id="@+id/nbrturuncu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Text"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    <ImageView
+        android:id="@+id/imageView5"
+       android:layout_width="22dp"
+        android:layout_height="24dp"
+        android:src="@drawable/yesilnokta" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Text"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</LinearLayout>

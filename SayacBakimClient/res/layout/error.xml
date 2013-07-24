@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/customborder2"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txtError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black" />
+
+   <LinearLayout
+       android:id="@+id/ClasicTypeError"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:background="@drawable/customborder"
+       android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/btnTamam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Tamam" />
+
+   </LinearLayout>
+   
+    <LinearLayout
+        android:id="@+id/UpdateTypeError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/customborder"
+        android:orientation="horizontal" >
+
+				    <Button
+				        android:id="@+id/btnUpdate"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:text="Güncelle" />				
+				    <Button
+				        android:id="@+id/btnClose"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:text="Kapat" />
+    </LinearLayout>
+
+</LinearLayout>

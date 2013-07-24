@@ -1,0 +1,88 @@
+﻿
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head >
+    <title>Sayaç Bakım Kullanım Kılavuzu</title>
+</head>
+<body style="background:#ffffff;height:100%">
+
+
+<h3>Giriş Sayfası (Sayaç Bakım Saha Kullanıcı Girişi)</h3>
+<p>
+Sistem yöneticiniz tarafından size verilen <b>KULLANICI ADI </b> ve <b>ŞİFRE</b> bilgileriniz ile giriş yapınız.Telefon menüsünü kullanarak <b> Kapat</b> ve <b>Yardım</b> seçeneklerini kullanabilirsiniz.
+</p>
+
+
+<h3>Filtre Sayfası (Gerekli filtrelemeleri gerçekleştirin.)</h3>
+<p>
+Saha kullanıcısı kendisine atanmış olan iş emirlerini <b>TARİH</b> ve <b>İŞ EMRİ DURUMU</b> bazında sorgulayabilir.Sorgulama esnasında <b>İş emri durumu "İş Durumu Seçiniz"</b> olarak seçilirse
+bütün iş emirleri durumları sorgulanır.Tarih seçimi zorunlu olarak gerçekleştirilir kullanıcı seçmiş olduğu tarihe göre kendisine atanan iş emirlerini ekranda görebilir. 
+</p>
+<p>
+Telefon menüsünü kullanarak <b> Kapat</b> seçeneğini kullanabilirsiniz.
+</p>
+
+<h3>Görev Listesi (Saha Kullanıcı Görev Listesi)</h3>
+<p>
+Saha kullanıcısı gerekli filtreleme işlemleri gerçekleştirdik sonra kendisine atanmış olan iş emirlerini bir liste şeklinde bu kısımda görebilir. Liste içinde iş emirlerine ait bilgiler bazı bilgiler
+görüntülenmektedir.(<b>Şehir,Semt,Seri No ,Sayaç Markası,İş Emri No,İş Emri Durumu</b>)
+İş emri durumlarına göre listede renkli düğmeler bulunmaktadır.Her bir renk iş emri durumları ile ilişkilendirilmiştir.<br/><br/>
+<img alt="" src="images/kirmizinokta.png" /> Kırmızı düğme iş emrinin iptal edildiğini gösterir.<br/><br/>
+<img alt="" src="images/mavinokta.png" /> Mavi düğme iş emrinin planlandığını gösterir.<br/><br/>
+<img alt="" src="images/sarinokta.png" /> Sari düğme iş emrinin çalışılıyor olduğunu gösterir.<br/><br/>
+<img alt="" src="images/siyahnokta.png" /> Siyah düğme iş beklemeye alındığını gösterir.<br/><br/>
+<img alt="" src="images/yesilnokta.png" /> Yeşil düğme iş emrinin tamamlandığını gösterir.<br/><br/>
+</p>
+<p>
+Listenen iş emirlerinin detayını görmek ve üzerinde değişiklik yapmak için iş emrinin üzerine tıklayabilirsiniz.
+</p>
+<p>
+Telefon menüsünü kullanarak <b> Kapat</b> ve <b> Yeni İş Emri Sorgula</b>  seçeneklerini kullanabilirsiniz.
+</p>
+
+
+<h3>Görev Listesi Düzenle (Saha Kullanıcı Görev Düzenle)</h3>
+<p>
+Sorgulanarak oluşturulan görev listesinden seçilen iş emirinin detayının görüntülendiği kısımdır.İş emrinin bulunduğu lokasyonu google map kullanarak görüntülemek için <b>"GİT"</b> düğmesine basınız.
+İş emri durumu ile ilgili güncelleştirmeleri bu sayfada yapınız.İş emri durumu <b>Planlandı</b> olan bir iş emri sadece <b>Çalışılıyor</b> ve <b>İptal</b> olarak güncellenebilir.İş emri durumları akışları aşağıdaki gibidir;
+<br/>
+<br/>
+Planlandı  --> Planlandı , Çalışılıyor , İptal<br/>
+Çalışılıyor--> Çalışılıyor ,Tamamlandı , Beklemede , İptal<br/>
+Beklemede  --> Beklemede , Çalışılıyor , İptal<br/>
+Tamamlandı --> Tamamlandı<br/>
+İptal      --> İptal<br/>
+</p>
+<p>
+İş emri durumu <b>Beklemede </b> ve <b>İptal </b> olarak güncelleneceği zaman <b>Açıklama </b> metni girmeniz zorunludur.
+</p>
+<p>
+Telefon menüsünü kullanarak <b> Kapat</b> ve <b> Yeni İş Emri Sorgula</b>  seçeneklerini kullanabilirsiniz.
+</p>
+
+
+
+<h3>İş Emri Durum Açıklamaları</h3>
+<p>
+<b>Planlandı : </b> Yönetici tarafından atanan iş emrinin ilk halidir.Saha kullanıcısının bir iş emri için gördüğü ilk durumdur.
+</p>
+
+<p>
+<b>Çalışılıyor : </b> Saha kullanıcısının çalışmaya başladığını gösteren durumdur.Saha kullanıcısı iş emri çalışmasına başladığı zaman iş emrini Çalışılıyor olarak güncellemelidir.
+</p>
+
+<p>
+<b>Beklemede : </b> Saha kullanıcısı iş emri ile ilgili bir problemle karşılaşırsa iş emrini Beklemede durumuna çekmelidir ve Sistem yöneticisinden bilgi beklemelidir.
+</p>
+
+<p>
+<b>Tamamlandı : </b> Saha kullanıcısı iş emri ile ilgili bütün işlemleri başarılı bir şekilde tamamladıktan sonra iş emri durumunu Tamamlandı olarak güncellemelidir.
+</p>
+
+<p>
+<b>İptal : </b> Saha kullanıcısı iş emri ile ilgili çözümlenemeyen bir durum ile karşılaşırsa iş emri durumunu İptal olarak güncellenemelidir.Çözümlenemeyen iş emirleri Sistem Yöneticisi tarafından da güncellenebilir.
+</p>
+
+<b>Sayac Bakım Saha uygulamasının bütün hakları Aktek Bilisim'e aittir @2012 </b>
+</body>
+</html>
