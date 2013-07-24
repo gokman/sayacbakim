@@ -26,7 +26,7 @@ public class ServiceAydem extends Activity
 {
 	private static ServiceAydem _service = null;
 	final String NAMESPACE = "http://tempuri.org/";
-	final String URL = "http://194.54.65.141/ws";
+	final String URL = "http://194.54.65.141:8090/ws.asmx";
 	//String URL = "http://www.aktekasos.com/ws.asmx";
 	String SOAP_ACTION ;
 	String METHOD_NAME ;
