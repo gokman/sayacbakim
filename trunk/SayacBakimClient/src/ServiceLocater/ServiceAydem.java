@@ -26,8 +26,8 @@ public class ServiceAydem extends Activity
 {
 	private static ServiceAydem _service = null;
 	final String NAMESPACE = "http://tempuri.org/";
-	final String URL = "http://194.54.65.141:8090/ws.asmx";
-	//String URL = "http://www.aktekasos.com/ws.asmx";
+	//final String URL = "http://194.54.65.141:8090/ws.asmx";
+	String URL = "http://www.aktekasos.com/ws.asmx";
 	String SOAP_ACTION ;
 	String METHOD_NAME ;
 	
@@ -282,10 +282,10 @@ public class ServiceAydem extends Activity
 		List<WorkOrder> ListWorkOrder = new ArrayList<WorkOrder>();
 		Map<String, Object> Parameters = new HashMap<String, Object>();
 		
-		Parameters.put("workOrderDate", WorkOrderDate);
-		Parameters.put("workOrderStatu", WorkOrderStatu);
+		Parameters.put("workorderDate", WorkOrderDate);
+		Parameters.put("workorderstatu", WorkOrderStatu);
 		Parameters.put("aboneno", AboneNo);
-		Parameters.put("userId", userId);
+		Parameters.put("userid", userId);
 
 		SoapObject ListWorker=null;
 		try {
