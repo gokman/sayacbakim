@@ -21,6 +21,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class PanoListActivity extends ListActivity 
@@ -107,7 +108,11 @@ public class PanoListActivity extends ListActivity
 				public void run() 
 				{
 					// TODO Auto-generated method stub
-					Service.getIntance().ToastMessage(activity, "Data Aktarým hatasý Sistem Yöneticinize baþvurun!!! \n "+ e.toString());
+					
+					Intent intent = new Intent(PanoListActivity.this, ErrorActivity.class);
+		    		intent.putExtra("Error_Message", e.toString());
+		    		intent.putExtra("ErrorType", 0);
+		    		startActivity(intent);
 				}
 			});
 		}
@@ -146,9 +151,15 @@ public class PanoListActivity extends ListActivity
 				v = vi.inflate(R.layout.panorow, null);
 			}
 			Pano o = items.get(position);
-			if (o != null) {
+			if (o != null) 
+			{
 				TextView txtPanelId= (TextView)v.findViewById(R.id.txtPanelId);
+				ImageView image= (ImageView)v.findViewById(R.id.imageView1);
+				
 				txtPanelId.setText(o.PanelId);
+				if(o.Statu!=3)
+					image.setImageResource(R.drawable.kirmizinokta);
+					
 			}
 			return v;
 		}

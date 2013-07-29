@@ -5,21 +5,21 @@ import java.util.List;
 
 import Objects.Malzeme;
 import ServiceLocater.GlobalVariables;
-import ServiceLocater.Service;
 import ServiceLocater.ServiceAydem;
 import android.app.Activity;
 import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -32,10 +32,11 @@ public class PanoMalzemeListActivity extends ListActivity
 	public static TextView MapY ;
 	private Runnable viewOrders;
 	private OrderAdapter m_adapter;
-	private List<Malzeme> m_orders = null;
+	private static List<Malzeme> m_orders = null;
 	Activity activity =PanoMalzemeListActivity.this;
 	static ListView listViewItems;
 	ImageButton btnNewPano;
+	Button btnMalzemeHome;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -52,6 +53,15 @@ public class PanoMalzemeListActivity extends ListActivity
 				getOrdersEx();
 			}
 		};
+		btnMalzemeHome.setOnClickListener(new OnClickListener() {
+			
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+			Intent intent = new Intent(PanoMalzemeListActivity.this,MenuActivity.class);
+			startActivity(intent);
+			finish();
+			}
+		});
 		Thread thread = new Thread(null, viewOrders, "MagentoBackground");
 		thread.start();
 		m_ProgressDialog = ProgressDialog.show(PanoMalzemeListActivity.this,
@@ -76,6 +86,7 @@ public class PanoMalzemeListActivity extends ListActivity
 		// TODO Auto-generated method stub
 		MapX=(TextView) findViewById(R.id.lblMapX);
 		MapY=(TextView) findViewById(R.id.lblMapY);
+		btnMalzemeHome=(Button)findViewById(R.id.btnMalzemeHome);
 		listViewItems= getListView();
 	}
 	public static void SyncLocation()
@@ -86,16 +97,20 @@ public class PanoMalzemeListActivity extends ListActivity
 			MapY.setText("Y :" +ServiceLocater.GlobalVariables.getIntance().MapY);
 		}
 	}
-	public static void ChangeListItemIcon(int position,int Ricon)
+	public static void ChangeListItemIcon(int position,int Ricon,float value,String description,boolean isselected)
 	{
-		
 		View v = listViewItems.getChildAt(position - 
 	            listViewItems.getFirstVisiblePosition());
 		ImageView image=(ImageView)v.findViewById(R.id.imageView1);
 		image.setImageResource(Ricon);
+		(m_orders.get(position)).Value=value;
+		(m_orders.get(position)).Description=description;
+		(m_orders.get(position)).IsSelected=isselected;
 	}
-	private void getOrdersEx() {
-		try {
+	private void getOrdersEx() 
+	{
+		try 
+		{
 			// Web Servis baðlantýsýný burada kurmak gerekiyor.
 			 m_orders = new ArrayList<Malzeme>();
 			 m_orders=ServiceAydem.getIntance().LoadMalzeme(GlobalVariables.getIntance().pano.PanelId);
@@ -108,7 +123,10 @@ public class PanoMalzemeListActivity extends ListActivity
 				public void run() 
 				{
 					// TODO Auto-generated method stub
-					Service.getIntance().ToastMessage(activity, "Data Aktarým hatasý Sistem Yöneticinize baþvurun!!! \n "+ e.toString());
+					Intent intent = new Intent(PanoMalzemeListActivity.this, ErrorActivity.class);
+		    		intent.putExtra("Error_Message", e.toString());
+		    		intent.putExtra("ErrorType", 0);
+		    		startActivity(intent);
 				}
 			});
 		}

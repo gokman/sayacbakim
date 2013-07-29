@@ -11,7 +11,7 @@ public class Malzeme {
 		this.MalzemeId=Integer.parseInt( GetValue(obj, "MALZEMEID"));
 		this.Value=Float.parseFloat(GetValue(obj, "VALUE"));
 		this.Description=GetValue(obj, "DESCRIPTION");
-		this.IsSelected=Boolean.parseBoolean(GetValue(obj, "ISSELECTED"));
+		this.IsSelected=GetValue(obj, "ISSELECTED").equals("1")  ? true : false;
 		this.Name=GetValue(obj,"NAME");
 		this.Unit=GetValue(obj,"UNIT");
 	}

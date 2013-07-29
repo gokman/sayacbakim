@@ -16,7 +16,6 @@ public class MalzemeEditActivity extends Activity {
 	EditText value;
 	EditText description;
 	Button btnMalzemeeditCancel;
-	PanoMalzemeListActivity listActivity= new PanoMalzemeListActivity();
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -42,7 +41,7 @@ public class MalzemeEditActivity extends Activity {
 							"",
 							false
 							);
-					listActivity.ChangeListItemIcon(position, R.drawable.kirmizinokta);
+					PanoMalzemeListActivity.ChangeListItemIcon(position, R.drawable.kirmizinokta,0,"",false);
 				}
 				else
 				{
@@ -52,7 +51,7 @@ public class MalzemeEditActivity extends Activity {
 							value.getText().toString(),
 							description.getText().toString(),
 							true);
-					listActivity.ChangeListItemIcon(position, R.drawable.yesilnokta);
+					PanoMalzemeListActivity.ChangeListItemIcon(position, R.drawable.yesilnokta,Float.parseFloat(value.getText().toString()),description.getText().toString(),true);
 				}
 				
 				
