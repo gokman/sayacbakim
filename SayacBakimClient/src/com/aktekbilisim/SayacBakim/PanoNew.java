@@ -87,7 +87,6 @@ public class PanoNew extends Activity
 		});
 		btnPanoBarcode.setOnClickListener(new OnClickListener() 
 		{
-			
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				 Intent intent = new Intent("com.google.zxing.client.android.SCAN");
@@ -96,9 +95,11 @@ public class PanoNew extends Activity
 			}
 		});
 		btnmalzeme.setOnClickListener(new OnClickListener() {
-			
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				if(GlobalVariables.getIntance().pano==null)
+					GlobalVariables.getIntance().pano=pano;
+				
 				Intent intent = new Intent(PanoNew.this, PanoMalzemeListActivity.class);
 				startActivity(intent);
 			}
@@ -181,22 +182,22 @@ public class PanoNew extends Activity
 		    		startActivity(intent);
 		    		return;
 				}
-				if(spinner.getSelectedItem().toString().equalsIgnoreCase("Tamamlandý")&&!ServiceAydem.getIntance().IsTrafoAvailable(txtTrafoCode.getText().toString()))
-				{
-					Intent intent = new Intent(PanoNew.this, ErrorActivity.class);
-		    		intent.putExtra("Error_Message", "Trafo Kodu sistemde bulunamadý.");
-		    		intent.putExtra("ErrorType", 0);
-		    		startActivity(intent);
-		    		return;
-				}
-				if(spinner.getSelectedItem().toString().equalsIgnoreCase("Tamamlandý")&&!ServiceAydem.getIntance().IsTesisatNoAvailable(txtTesisatNo.getText().toString()))
-				{
-					Intent intent = new Intent(PanoNew.this, ErrorActivity.class);
-		    		intent.putExtra("Error_Message", "Tesisat No sistemde bulunamadý.");
-		    		intent.putExtra("ErrorType", 0);
-		    		startActivity(intent);
-		    		return;
-				}
+//				if(spinner.getSelectedItem().toString().equalsIgnoreCase("Tamamlandý")&&!ServiceAydem.getIntance().IsTrafoAvailable(txtTrafoCode.getText().toString()))
+//				{
+//					Intent intent = new Intent(PanoNew.this, ErrorActivity.class);
+//		    		intent.putExtra("Error_Message", "Trafo Kodu sistemde bulunamadý.");
+//		    		intent.putExtra("ErrorType", 0);
+//		    		startActivity(intent);
+//		    		return;
+//				}
+//				if(spinner.getSelectedItem().toString().equalsIgnoreCase("Tamamlandý")&&!ServiceAydem.getIntance().IsTesisatNoAvailable(txtTesisatNo.getText().toString()))
+//				{
+//					Intent intent = new Intent(PanoNew.this, ErrorActivity.class);
+//		    		intent.putExtra("Error_Message", "Tesisat No sistemde bulunamadý.");
+//		    		intent.putExtra("ErrorType", 0);
+//		    		startActivity(intent);
+//		    		return;
+//				}
 				if(spinner.getSelectedItem().toString().equalsIgnoreCase("Tamamlandý")&&(ServiceLocater.GlobalVariables.getIntance().MapX==null||ServiceLocater.GlobalVariables.getIntance().MapX==null))
 				{
 					Service.getIntance().ToastMessage(PanoNew.this, "Koordinasyon bilgileriniz alýnamadý.X Y koordinatlarýnýn dolmasýný saðlayýnýz.");
