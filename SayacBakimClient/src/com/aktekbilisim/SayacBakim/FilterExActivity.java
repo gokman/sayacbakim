@@ -1,6 +1,7 @@
 package com.aktekbilisim.SayacBakim;
 
 import java.io.File;
+
 import java.text.Format;
 import java.util.ArrayList;
 
@@ -20,8 +21,8 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 
-import com.markupartist.android.widget.ActionBar;
-import com.markupartist.android.widget.ActionBar.IntentAction;
+//import com.markupartist.android.widget.ActionBar;
+//import com.markupartist.android.widget.ActionBar.IntentAction;
 
 public class FilterExActivity extends Activity 
 {

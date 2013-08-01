@@ -1,6 +1,7 @@
 package com.aktekbilisim.SayacBakim;
 
 import java.io.ByteArrayOutputStream;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -35,8 +36,8 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.markupartist.android.widget.ActionBar;
-import com.markupartist.android.widget.ActionBar.IntentAction;
+//import com.markupartist.android.widget.ActionBar;
+//import com.markupartist.android.widget.ActionBar.IntentAction;
 
 public class PanoNew extends Activity 
 {
@@ -346,10 +347,10 @@ public class PanoNew extends Activity
 		Bundle extras = getIntent().getExtras();
 		processType=extras.getString("processType");
 		pano=GlobalVariables.getIntance().pano;
-		final ActionBar trafoBar = (ActionBar) findViewById(R.id.TrafoBar);
-		trafoBar.setTitle("Trafo Sayacý");
-		final ActionBar sokakBar = (ActionBar) findViewById(R.id.SokakBar);
-		sokakBar.setTitle("Sokak Sayacý");
+		//final ActionBar trafoBar = (ActionBar) findViewById(R.id.TrafoBar);
+		//trafoBar.setTitle("Trafo Sayacý");
+		//final ActionBar sokakBar = (ActionBar) findViewById(R.id.SokakBar);
+		//sokakBar.setTitle("Sokak Sayacý");
 		btnHome=(Button)findViewById(R.id.btnHome);
 		btnPanoBarcode=(ImageButton)findViewById(R.id.btnPanoBarcode);
 		txtPanelId=(EditText)findViewById(R.id.txtPanelId);

@@ -2,6 +2,7 @@ package com.aktekbilisim.SayacBakim;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 
 import Objects.Base64Coder;
@@ -51,29 +52,32 @@ public class PhotoListActivity extends Activity {
 
 				String[] listphotoSenk = LoadPhotoPaths();
 				BitmapFactory.Options options = new BitmapFactory.Options();
+				//options.outHeight=40;
+				//options.outWidth=40;
 				options.inSampleSize = 8;
 				File sdcard = Environment.getExternalStorageDirectory();
 				m_ProgressDialog.setMax(listphotoSenk.length);	
 				for (int j = 0; j < listphotoSenk.length; j++) {
 					try {
-						String sourceDestination = sdcard + "/DCIM/Camera/"
-								+ listphotoSenk[j];
-						Bitmap firstbitmap = BitmapFactory.decodeFile(
-								sourceDestination, options);
-
+						String sourceDestination = sdcard.getAbsolutePath() + "/DCIM/Camera/" + listphotoSenk[j];
+						Bitmap firstbitmap = BitmapFactory.decodeFile(sourceDestination, options);
+					if(firstbitmap!=null){
 						if (Service
 								.getIntance()
 								.UpLoad(GlobalVariables.getIntance().user.UserName,
 										listphotoSenk[j],
 										convertBmpToByte(firstbitmap))) {
-							new File(sourceDestination).delete();
+							System.out.println("dd");
+							//new File(sourceDestination).delete();
 						}
+					}
 					} catch (Exception ex) {
 						Service.getIntance().ToastMessage(
 								getApplicationContext(),
 								"Upload Hatasý : " + listphotoSenk[j]
 										+ " Mesaj : " + ex.getMessage());
 					}
+					
 					m_ProgressDialog.setProgress(j);
 				}
 				m_ProgressDialog.dismiss();
@@ -91,6 +95,7 @@ public class PhotoListActivity extends Activity {
 							MenuActivity.class);
 					startActivity(intent);
 					finish();
+					
 
 				} else {
 					runOnUiThread(new Runnable() {
@@ -110,13 +115,14 @@ public class PhotoListActivity extends Activity {
 		};
 		senkThread = new Thread(null, senk, "MagentoBackground");
 		senkThread.start();
+		
 	}
 
 	private String[] LoadPhotoPaths() {
 		// TODO Auto-generated method stub
 		File sdcard = Environment.getExternalStorageDirectory();
-		String newFilePath = "DCIM/Camera";
-		File file = new File(sdcard, newFilePath);
+		String newFilePath = "/DCIM/Camera";
+		File file = new File(sdcard.getAbsolutePath()+newFilePath);
 		String[] filelist = new String[file.listFiles().length];
 		for (int i = 0; i < file.listFiles().length; i++) {
 			filelist[i] = file.listFiles()[i].getName();

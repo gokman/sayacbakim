@@ -4,6 +4,7 @@ package com.aktekbilisim.SayacBakim;
 
 import java.io.File;
 
+
 import ServiceLocater.Service;
 import android.app.Activity;
 import android.content.Context;
@@ -16,8 +17,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 
-import com.markupartist.android.widget.ActionBar;
-import com.markupartist.android.widget.ActionBar.IntentAction;
+//import com.markupartist.android.widget.ActionBar;
+//import com.markupartist.android.widget.ActionBar.IntentAction;
 
 public class MenuActivity extends Activity 
 {
