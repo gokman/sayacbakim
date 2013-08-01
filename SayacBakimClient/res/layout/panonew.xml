@@ -188,7 +188,6 @@
                     
        <com.markupartist.android.widget.ActionBar 
         android:id="@+id/TrafoBar"
-        style="@style/ActionBar"
         />
        
        <LinearLayout
@@ -246,7 +245,7 @@
     android:orientation="vertical" >
        <com.markupartist.android.widget.ActionBar
            android:id="@+id/SokakBar"
-           style="@style/ActionBar"/>
+          />
          <LinearLayout
          android:id="@+id/linearLayout990"
          android:layout_width="match_parent"
