@@ -25,7 +25,7 @@ import android.widget.Toast;
 	private static Service _service = null;
 	final String NAMESPACE = "http://tempuri.org/";
 	//final String URL = "http://194.54.75.66/SayacWB/";
-	String URL = "http://www.aktekasos.com/ws/SahaPortal.asmx";
+	String URL = "http://www.aktekasos.com/ws.asmx";
 	String SOAP_ACTION ;
 	String METHOD_NAME ;
 	
