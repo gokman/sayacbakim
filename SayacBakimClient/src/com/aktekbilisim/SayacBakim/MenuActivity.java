@@ -29,6 +29,7 @@ public class MenuActivity extends Activity
 	ImageButton	btnupdate;
 	ImageButton btnLoadPhoto;
 	ImageButton btnPano;
+	ImageButton btnFinishDay;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) 
 	{
@@ -119,6 +120,14 @@ public class MenuActivity extends Activity
 				startActivity(intent);
 			}
 		});
+		 btnFinishDay.setOnClickListener(new OnClickListener() {
+				
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					Intent intent= new Intent(MenuActivity.this,FinishDayActivity.class);
+					startActivity(intent);
+				}
+			});
 	}
 	public static Intent createIntent(Context context) {
 	        Intent i = new Intent(context, MenuActivity.class);

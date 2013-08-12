@@ -1,13 +1,17 @@
 package com.aktekbilisim.SayacBakim;
 
 import java.io.File;
-
+import java.text.DateFormat;
 import java.text.Format;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import Objects.EnumWorkOrderStatus;
 import ServiceLocater.GlobalVariables;
 import ServiceLocater.Service;
+import ServiceLocater.ServiceAydem;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,6 +24,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 //import com.markupartist.android.widget.ActionBar;
 //import com.markupartist.android.widget.ActionBar.IntentAction;
@@ -34,6 +39,7 @@ public class FilterExActivity extends Activity
 	static EditText lblDate;
 	Format formatter ;
 	ImageButton btnCalender;
+	Button btnFinishDay;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) 
 	{
@@ -105,6 +111,31 @@ public class FilterExActivity extends Activity
 				startActivity(intent);
 			}
 		});
+		btnFinishDay.setOnClickListener(new OnClickListener() {
+			
+			public void onClick(View arg0) {
+				int a=0;
+				a=ServiceAydem.getIntance().GetPanelCount(Integer.parseInt(GlobalVariables.getIntance().user.UserId));
+				//web servis metodu çaðýrýp sayý elde et
+				//elde edilen sayý 4 ise
+				if(a>=4){
+				Toast.makeText(getApplicationContext(), "Günü baþarý ile tamamladýnýz", Toast.LENGTH_LONG).show();
+				
+				try {
+					ServiceAydem.getIntance().InsertGunOzur(Integer.parseInt(GlobalVariables.getIntance().user.UserId), "", a);
+				} catch (NumberFormatException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} 
+				//finishDayButton.setClickable(false);
+				}else{
+				//elde edilen sayý 4 ten küçük ise 
+				Intent intent=new Intent(FilterExActivity.this,FinishDayDetailActivity.class);
+				startActivity(intent);
+				}
+				
+			}
+		});
 	}
 
 	private void Initiliaze() 
@@ -117,6 +148,7 @@ public class FilterExActivity extends Activity
 			btnCalender=(ImageButton)findViewById(R.id.imageButton1);
 			lblDate=(EditText)findViewById(R.id.lblDate);
 			txtAboneNo = (EditText)findViewById(R.id.txtAboneNo);
+			btnFinishDay=(Button)findViewById(R.id.buttonFinishDay);
 			String[] items = new String[] {"Ýþ Durumu Seçiniz", "Planlandý", "Beklemede", "Çalýþýlýyor","Montaj Tamamlandý"};
 			ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 					android.R.layout.simple_spinner_item, items);

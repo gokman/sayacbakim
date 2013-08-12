@@ -1,6 +1,7 @@
 package ServiceLocater;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -201,6 +202,53 @@ public class ServiceAydem extends Activity
 		} catch (Exception e) {
 			// TODO: handle exception
 			return null;
+		}
+	}
+	public int GetPanelCount(int userId) 
+	{
+		SOAP_ACTION = "http://tempuri.org/GetPanelCount";
+		METHOD_NAME = "GetPanelCount";
+		Map<String, Object> Parameters = new HashMap<String, Object>();
+		Parameters.put("userId", userId);
+		String soapObject="";
+		String stringTemp="";
+		int count=0;
+		try 
+		{
+			stringTemp=HttpTransport(SOAP_ACTION,METHOD_NAME, NAMESPACE, URL, Parameters).toString();
+			count=Integer.parseInt(stringTemp);
+			
+			return count;
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			return -1;
+		}
+	}
+	public Response InsertGunOzur(int userId,String detail,int count) 
+	{
+		SOAP_ACTION = "http://tempuri.org/InsertGunOzur";
+		METHOD_NAME = "InsertGunOzur";
+		Map<String, Object> Parameters = new HashMap<String, Object>();
+		Parameters.put("userId", userId);
+		Parameters.put("detail", detail);
+		Parameters.put("count", count);
+		SoapObject soapObject;
+		Response response=new Response();
+		
+		try {
+			soapObject= (SoapObject)HttpTransport(SOAP_ACTION,
+					METHOD_NAME, NAMESPACE, URL, Parameters);
+			
+					response.Result=Integer.parseInt(soapObject.getProperty("Result").toString());	
+					response.Message=soapObject.getProperty("Message").toString();
+	
+			return response;
+		} catch (Exception e) {
+			// TODO: handle exception
+			response.Result=-1;
+			response.Message="hata";
+			return response;
 		}
 	}
 	public boolean IsTrafoAvailable(String trafoCode)
