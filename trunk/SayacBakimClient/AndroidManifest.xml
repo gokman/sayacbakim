@@ -89,16 +89,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-		<activity
-            android:name=".PhotoListActivity"
-            android:icon="@drawable/sayac"
-            android:label="@string/app_name"
-            android:launchMode="singleTask"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"  >
-            <intent-filter>
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".AppStartActivity"
             android:icon="@drawable/sayac"
@@ -108,6 +98,16 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PhotoListActivity"
+            android:icon="@drawable/sayac"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"  >
+            <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -145,6 +145,17 @@
             </intent-filter>
         </activity>
         
+          <activity
+            android:name=".FinishDayDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/filterActivity_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
         <activity
             android:name=".FilterActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -157,6 +168,16 @@
         </activity>
          <activity
             android:name=".FilterExActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/filterActivity_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FinishDayActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/filterActivity_name"
             android:screenOrientation="portrait"
