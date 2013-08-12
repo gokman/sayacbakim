@@ -101,5 +101,6 @@
     <string name="lblm36">PLASTİK DÜBEL 10 mm(Adet)</string>
     <string name="lblm37">5 X 50 sunta vidası beyaz(Adet)</string>
     <string name="lblm38">5/16" ince pul beyaz(Adet)</string>
-    
+    <string name="finishDate">Günü Tamamla</string>
+    <string name="buttonfinishDate">Günü Tamamla</string>
 </resources>

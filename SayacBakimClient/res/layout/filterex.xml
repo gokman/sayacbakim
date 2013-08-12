@@ -134,6 +134,15 @@
         android:textColor="@color/white"
         android:text="@string/lblSearch"
         android:textStyle="bold" />
+    
+     <Button
+        android:id="@+id/buttonFinishDay"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="190dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/buttonfinishDate"
+        style="@style/buttonFinishDate" />
 
 </LinearLayout>
 
