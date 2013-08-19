@@ -235,7 +235,8 @@ public class PanoNew extends Activity
 							finish();
 							return;
 						}
-						Service.getIntance().ToastMessage(PanoNew.this, "Deðiþiklikler kaydedildi.");
+						//19.08.2013 tarihinde kaldýrýldý
+						//Service.getIntance().ToastMessage(PanoNew.this, "Deðiþiklikler kaydedildi.");
 					}
 					else
 					{
