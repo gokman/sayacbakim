@@ -611,11 +611,8 @@ public class ServiceAydem extends Activity
 				request.addProperty(pi);
 			}
 
-			SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(
-					SoapEnvelope.VER11);
+			SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
 			envelope.dotNet = true;
-			envelope.addMapping(NAMESPACE, "WorkOrder",new WorkOrder().getClass());
-			envelope.addMapping(NAMESPACE, "PhotoInfo[]",new ArrayList<PhotoInfo>().getClass());
 
 			envelope.bodyOut = request;
 			envelope.setOutputSoapObject(request);

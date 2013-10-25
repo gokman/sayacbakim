@@ -34,14 +34,14 @@ public class AppStartActivity extends Activity
 			}
 			ServiceAydem.getIntance().UpSertPhone(telephonyManager.getDeviceId());
 			
-			if(!ServiceAydem.getIntance().IsPhoneVersionUpToDate(telephonyManager.getDeviceId(),res.getString(R.string.app_name)))
-			{
-				Intent intent = new Intent(AppStartActivity.this, ErrorActivity.class);
-	    		intent.putExtra("Error_Message", "Uygulumanýn yeni bir sürümü var.Güncellemek ister misiniz?");
-	    		intent.putExtra("ErrorType", 1);
-	    		startActivity(intent);
-	    		return;
-			}
+//			if(!ServiceAydem.getIntance().IsPhoneVersionUpToDate(telephonyManager.getDeviceId(),res.getString(R.string.app_name)))
+//			{
+//				Intent intent = new Intent(AppStartActivity.this, ErrorActivity.class);
+//	    		intent.putExtra("Error_Message", "Uygulumanýn yeni bir sürümü var.Güncellemek ister misiniz?");
+//	    		intent.putExtra("ErrorType", 1);
+//	    		startActivity(intent);
+//	    		return;
+//			}
 			
 			//(res.getString(R.string.app_name), GlobalVariables.getIntance().user.UserId,GlobalVariables.getIntance().Deviceid);
 			try {
